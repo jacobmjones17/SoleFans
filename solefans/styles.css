@@ -938,10 +938,17 @@ a {
 .payment-qr {
   display: block;
   width: min(100%, 220px);
-  height: auto;
   margin: 0 auto 1rem;
   border-radius: 12px;
   background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.payment-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .payment-qr[hidden] {
@@ -1103,6 +1110,10 @@ a {
   .gallery-media {
     height: 14rem;
     min-height: 12rem;
+  }
+
+  .gallery-media img.sock {
+    object-fit: fill;
   }
 
   .gallery-body h3 {
