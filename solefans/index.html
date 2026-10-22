@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SoleFans | Premium Toe Content Since College</title>
+  <meta name="description" content="You scanned the QR code. You know why you're here. Welcome to SoleFans.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SoleFans | Premium Toe Content Since College">
+  <meta property="og:description" content="You scanned the QR code. You know why you're here. Welcome to SoleFans.">
+  <meta property="og:image" content="images/gallery-1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <div class="modal-backdrop" id="payment-modal" role="dialog" aria-modal="true" aria-labelledby="payment-title" hidden>
+    <div class="modal">
+      <h3 id="payment-title">Payment declined</h3>
+      <p id="payment-message">Your dignity has already been charged.</p>
+      <p class="muted" id="payment-fine" style="font-size:0.8rem;margin-bottom:0">Nothing on this site is for sale. This is a joke. Put your wallet away.</p>
+      <img id="payment-qr" class="payment-qr" src="images/venmo-qr.jpg" alt="Venmo QR code for Jacob Jones" hidden>
+      <button type="button" class="btn btn--small" id="payment-close">OK, FAIR ENOUGH</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="logo">🦶 Sole<span class="accent">Fans</span></div>
+      <div class="tagline-pill">
+        <span class="tagline-long">Premium Toe Content Since College</span>
+        <span class="tagline-short">Premium Toes Since College</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-icon" aria-hidden="true">🦶</div>
+      <p class="eyebrow">Welcome to the exclusive side of the internet</p>
+      <h1>
+        <span class="line">You Came for the <span class="accent">Toes.</span></span>
+        <span class="line">Stay for the <span class="accent">Soles.</span></span>
+      </h1>
+      <p class="hero-lead">You scanned the QR code. You know why you're here.</p>
+      <p class="hero-sub">Premium foot content since college. Retired from the game, but the legend lives on.</p>
+      <a class="btn" href="#gallery">UNLOCK THE PIGGIES 🐷</a>
+      <div class="hero-stats" aria-label="Site statistics">
+        <div class="stat"><strong>10</strong><span>Premium<br>Toes</span></div>
+        <div class="stat"><strong>2</strong><span>Legendary<br>Soles</span></div>
+        <div class="stat"><strong>1</strong><span>Retired<br>Entrepreneur</span></div>
+        <div class="stat"><strong>0</strong><span>Zero<br>Regrets</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    Gallery photos: replace solefans/images/gallery-1.jpg … gallery-8.jpg with your own shots
+    (same filenames). Current files are free Pexels stock placeholders mapped to each card:
+    1 your forbidden piggies photo, 2 nail biter photo, 3 seductive hoof photo, 4 clownfish sock tease photo,
+    5 cursed dorm feet, 6 airport travel, 7 socks+sandals crime, 8 wrinkly retirement soles.
+  -->
+  <section class="section section--alt" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Exclusive content</p>
+        <h2>A Sneak Peek at the Piggies</h2>
+        <p class="muted">Tap a locked card to remove the sock and see the money makers.</p>
+      </div>
+      <div class="gallery">
+        <article class="gallery-card is-locked" data-gallery-card>
+          <div class="gallery-media">
+            <span class="badge">VIP ONLY</span>
+            <img src="images/gallery-1.jpg" alt="The forbidden piggies — viewer discretion advised" width="800" height="600" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>The Forbidden Piggies</h3>
+            <p>A fan favorite. Snack included.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-gallery-card>
+          <div class="gallery-media gallery-media--focus-toes">
+            <span class="badge">HOT DROP</span>
+            <img src="images/gallery-2.jpg" alt="Long metallic blue toenails — nail biter" width="516" height="387" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>Nail Biter</h3>
+            <p>Claws out.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card is-locked" data-gallery-card>
+          <div class="gallery-media gallery-media--seductive-hoof">
+            <span class="badge">RARE CONTENT</span>
+            <img src="images/gallery-3.jpg" alt="Five-toe socks with anklets — seductive hoof" width="800" height="600" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>Seductive Hoof</h3>
+            <p>Five-toe mesh liners. Anklets on deck. Toes spelled out individually.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card is-locked" data-gallery-card>
+          <div class="gallery-media gallery-media--show-full">
+            <span class="badge">HOT DROP</span>
+            <img src="images/gallery-4.jpg" alt="Clownfish split-toe socks — the sock tease" width="236" height="314" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>The Sock Tease</h3>
+            <p>Just keep teasing. Just keep teasing.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-gallery-card>
+          <div class="gallery-media">
+            <span class="badge">MOST VIEWED</span>
+            <img src="images/gallery-5.jpg" alt="College-era feet with questionable nail choices" width="800" height="600" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>College Tuition Collection</h3>
+            <p>The hustle that built an empire. The toes that built trauma.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card is-locked" data-gallery-card>
+          <div class="gallery-media gallery-media--show-ankle">
+            <span class="badge">VIP ONLY</span>
+            <img src="images/gallery-6.jpg" alt="Show some ankle — swollen feet on patterned rug" width="800" height="600" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>Show Some Ankle</h3>
+            <p>Victorian scandal. Modern subscription.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card is-locked" data-gallery-card>
+          <div class="gallery-media gallery-media--show-full">
+            <span class="badge">RARE CONTENT</span>
+            <img src="images/gallery-7.jpg" alt="Long yellow toenails in beaded sandals" width="200" height="150" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>Barely Legal (To Wear Sandals)</h3>
+            <p>Seasonal drop. Arrest imminent.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-gallery-card>
+          <div class="gallery-media">
+            <span class="badge">MOST VIEWED</span>
+            <img src="images/gallery-8.jpg" alt="Retired soles — wrinkly, dry, and proud" width="800" height="600" loading="lazy">
+            <div class="gallery-lock" aria-hidden="true"><img class="sock" src="images/sock.png" alt=""></div><button type="button" class="btn btn--small gallery-unlock">Remove Sock</button>
+          </div>
+          <div class="gallery-body">
+            <h3>The Retirement Collection</h3>
+            <p>Out of the game. Still haunting the arch support aisle.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plans">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Membership</p>
+        <h2>Find Your Sole Mate</h2>
+        <p class="muted">Choose a tier. Get roasted. No money changes hands. Ever.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Toe Curious</h3>
+          <div class="plan-price">FREE</div>
+          <ul>
+            <li>One complimentary toe</li>
+            <li>Starter piggy previews</li>
+            <li>Mild public embarrassment</li>
+          </ul>
+          <button type="button" class="btn btn--small plan-btn" data-plan="free">Dip a Toe In</button>
+        </div>
+        <div class="plan plan--featured">
+          <span class="plan-badge">Most popular</span>
+          <h3>Sole Mate</h3>
+          <div class="plan-price">$9.99<span style="font-size:1rem;font-weight:600">/month</span></div>
+          <ul>
+            <li>All five toes on one foot</li>
+            <li>Premium sock lore</li>
+            <li>She saw you scan</li>
+          </ul>
+          <button type="button" class="btn btn--small plan-btn" data-plan="mate">Become a Sole Mate</button>
+        </div>
+        <div class="plan">
+          <h3>Ultimate Foot Freak</h3>
+          <div class="plan-price">$99.99<span style="font-size:1rem;font-weight:600">/month</span></div>
+          <ul>
+            <li>Both feet. All ten toes.</li>
+            <li>Unlimited toe puns</li>
+            <li>Bragging rights (undeserved)</li>
+          </ul>
+          <button type="button" class="btn btn--small plan-btn" data-plan="freak">Release the Feet</button>
+        </div>
+      </div>
+      <p class="plan-disclaimer">Parody only. No accounts, payments, or personal data. Your dignity is already on layaway.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The legend</p>
+        <h2>Meet the Woman Behind the Soles</h2>
+        <p class="muted">Some people went to college for a degree. Others discovered they were sitting on a gold mine — literally, feet on the floor, monetizing the myth.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>College Years / The Empire Begins</h4>
+          <p>Ramen budgets, premium piggies, and a side hustle that paid better than the internship.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Graduation / The Toes Retire</h4>
+          <p>Cap, gown, and a graceful exit from the toe economy. The lore only grew.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Marriage / Exclusive Lifetime Subscription</h4>
+          <p>One lucky subscriber. Unlimited access. Zero monthly fee. Maximum eye rolls.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>2026 / The Airport Comeback Tour</h4>
+          <p>One QR code on a T-shirt. Infinite secondhand embarrassment. You're part of the show.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Security check</p>
+        <h2>Verify You're a Real Foot Fan</h2>
+      </div>
+      <div class="quiz">
+        <p class="muted"><strong>How many toes does the average human have?</strong></p>
+        <div class="quiz-options" role="group" aria-label="Quiz answers">
+          <button type="button" data-quiz="8">8</button>
+          <button type="button" data-quiz="10">10</button>
+          <button type="button" data-quiz="12">12</button>
+          <button type="button" data-quiz="tier">Depends on the subscription tier</button>
+        </div>
+        <div class="quiz-result" id="quiz-result" role="status"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="forbidden">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ultra VIP</p>
+        <h2>Reveal the Forbidden Toe</h2>
+        <p class="muted">Tap to unveil what the algorithm hid.</p>
+      </div>
+      <div class="forbidden">
+        <div class="forbidden-reveal is-blurred" id="forbidden-reveal" tabindex="0" role="button" aria-label="Reveal the forbidden toe">
+          <img src="images/forbidden-toe.jpg" alt="" width="600" height="600" loading="lazy">
+          <span class="forbidden-label">Tap to reveal 🔒</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Live from the terminal</p>
+        <h2>Fan Activity Feed</h2>
+        <p class="muted">100% fictional. 100% plausible. You're in this story now.</p>
+      </div>
+      <div class="feed" aria-live="polite">
+        <div class="feed-label">Fiction · Not real notifications</div>
+        <p class="feed-text" id="feed-text">Terminal B just unlocked a toe.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="finale" id="finale">
+    <div style="font-size:3.5rem" aria-hidden="true">🎉🦶🎉</div>
+    <h2>Congratulations!</h2>
+    <p><strong>You've officially been caught scanning a stranger's shirt for feet pics.</strong></p>
+    <p>Your family would be proud.</p>
+    <p>Thank you for supporting a retired college entrepreneur.</p>
+    <p>Somewhere in this airport, a husband is laughing way too hard right now.</p>
+    <div class="finale-cta">
+      <p class="finale-cta-tease">Psst… something happens if you tap this.</p>
+      <button type="button" class="btn btn-regret" id="regret-btn" aria-label="Unleash the toe avalanche">
+        <span class="btn-regret__shine" aria-hidden="true"></span>
+        <span class="btn-regret__label">TAP FOR FREE TOE RAIN 🦶</span>
+      </button>
+      <p class="finale-cta-hint">100% free · 0% shame · infinite feet</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © SoleFans · Parody site · No feet were monetized today
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
